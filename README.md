@@ -86,22 +86,37 @@ This script:
 ### 6. Open the Web UI
 Open index.html in a browser. Upload an image to get real-time emotion prediction from the model.
 
-### 📊 Model Performance Summary
-| Emotion   | Precision |  Recall  | F1-Score |
-|----------|-----------|----------|-------|
-|Happy|	0.94	|0.95|	0.94	|
-|Neutral |	0.89 |	0.90	| 0.89	|
-|Fear|	0.87	|0.84	| 0.85|
 
-- Accuracy: ~93%
-- F1 Macro Avg: ~92%
-- Evaluation tools: classification_report, confusion_matrix from scikit-learn
+### Project Workflow
+-- Data Preprocessing
+- Grayscale conversion
+- Image resizing (64x64)
+- Pixel normalization
+- Label encoding and flattening
 
-### ✨ Key Highlights
-- High accuracy using classical ML methods
-- No need for GPUs or deep learning
-- Portable and lightweight for demo or educational use
-- Clean web interface for ease of testing and interaction
+-- Dimensionality Reduction:
+- LDA applied to maximize class separability
+- Reduced features fed into classifier
+
+-- Model Training:
+- SVM classifier trained on LDA-transformed data
+- Optimized for classifying 8 emotional states
+
+### Model Evaluation:
+- Accuracy: 64.51%
+- Precision: 44.27%
+- Recall: 61.46%
+- F1 Score: 49.72%
+- Confusion matrix revealed difficulty with visually similar emotions
+
+### 🌍 Real-World Applications
+- Mental health monitoring in healthcare
+- Student engagement analysis in education
+- Emotion-aware AI assistants for better customer experience
+- Threat detection in surveillance systems
+
+### 🚀 Performance Summary
+The model demonstrates strong recall and fair precision, making it suitable for environments where identifying emotions is more critical than avoiding false positives. The framework is modular and can be extended using CNNs or multimodal inputs for better accuracy in future iterations.
 
 ### 📈 Future Improvements
 - Add face detection using OpenCV Haar cascades
