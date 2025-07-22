@@ -58,8 +58,7 @@ emotion-detection-app/
 ## 🚀 How to Run the Project
 
 ### 1.Clone the Repository
-git clone https://github.com/your-username/emotion-detection-app.git
-cd emotion-detection-app
+git clone https://github.com/Akanksha200008/FACIAL-EXPRESSION-RECOGNITION-POWERED-BY-LDA-AND-MACHINE-LEARNING
 
 ### 2.Create Virtual Environment
 python -m venv venv
