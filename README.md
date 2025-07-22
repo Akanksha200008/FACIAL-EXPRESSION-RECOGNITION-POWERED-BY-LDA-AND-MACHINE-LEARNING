@@ -57,14 +57,58 @@ emotion-detection-app/
 
 ## 🚀 How to Run the Project
 
-### 1. Clone the Repository
-```bash
+### 1.Clone the Repository
 git clone https://github.com/your-username/emotion-detection-app.git
 cd emotion-detection-app
 
 ### 2.Create Virtual Environment
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
+
+### 3.Install Dependencies
+pip install -r requirements.txt
+If not present, generate it with:
+pip freeze > requirements.txt
+
+### 4. Optional(Train the Model)
+python initialcode.py
+
+This script:
+Loads facial images and emotion labels
+Applies preprocessing and LDA
+Trains an SVM classifier
+Saves the models and evaluation results
+
+### 5. Start the Flask App
+python frontapp.py
+The API will start at http://127.0.0.1:5000/
+
+### 6. Open the Web UI
+Open index.html in a browser. Upload an image to get real-time emotion prediction from the model.
+
+### 📊 Model Performance Summary
+| Emotion   | Precision |  Recall  | F1-Score |
+|----------|-----------|----------|-------|
+|Happy|	0.94	|0.95|	0.94	|
+|Neutral |	0.89 |	0.90	| 0.89	|
+|Fear|	0.87	|0.84	| 0.85|
+
+Accuracy: ~93%
+F1 Macro Avg: ~92%
+Evaluation tools: classification_report, confusion_matrix from scikit-learn
+
+### ✨ Key Highlights
+High accuracy using classical ML methods
+No need for GPUs or deep learning
+Portable and lightweight for demo or educational use
+Clean web interface for ease of testing and interaction
+
+### 📈 Future Improvements
+Add face detection using OpenCV Haar cascades
+Extend dataset and retrain for robustness
+Integrate deep learning models like CNNs for comparison
+Deploy app to a public cloud or serverless function
+
 
 ---
 
