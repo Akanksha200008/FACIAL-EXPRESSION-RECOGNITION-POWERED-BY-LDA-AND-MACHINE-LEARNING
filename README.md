@@ -43,14 +43,14 @@ Facial emotion recognition is key in human-computer interaction, mental health a
 
 ## 📁 Folder Structure
 emotion-detection-app/
-├── frontapp.py # Flask API server for emotion prediction
-├── initialcode.py # ML model training and evaluation script
-├── index.html # Web interface for uploading images
-├── lda_model.pkl # Trained LDA dimensionality reduction model
-├── svm_model.pkl # Trained SVM emotion classifier
-├── uploads/ # Folder to store uploaded test images
-├── metrics_table.csv # Precision, recall, and F1-score per emotion
-├── confusion_matrix.csv # Confusion matrix of model predictions
+- ├── frontapp.py # Flask API server for emotion prediction
+- ├── initialcode.py # ML model training and evaluation script
+- ├── index.html # Web interface for uploading images
+- ├── lda_model.pkl # Trained LDA dimensionality reduction model
+- ├── svm_model.pkl # Trained SVM emotion classifier
+- ├── uploads/ # Folder to store uploaded test images
+- ├── metrics_table.csv # Precision, recall, and F1-score per emotion
+- ├── confusion_matrix.csv # Confusion matrix of model predictions
 
 
 ---
@@ -61,26 +61,27 @@ emotion-detection-app/
 git clone https://github.com/Akanksha200008/FACIAL-EXPRESSION-RECOGNITION-POWERED-BY-LDA-AND-MACHINE-LEARNING
 
 ### 2.Create Virtual Environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+- python -m venv venv
+- source venv/bin/activate  # Windows: venv\Scripts\activate
 
 ### 3.Install Dependencies
-pip install -r requirements.txt
-If not present, generate it with:
-pip freeze > requirements.txt
+-pip install -r requirements.txt
+
+- If not present, generate it with:
+- pip freeze > requirements.txt
 
 ### 4. Optional(Train the Model)
 python initialcode.py
 
 This script:
-Loads facial images and emotion labels
-Applies preprocessing and LDA
-Trains an SVM classifier
-Saves the models and evaluation results
+- Loads facial images and emotion labels
+- Applies preprocessing and LDA
+- Trains an SVM classifier
+- Saves the models and evaluation results
 
 ### 5. Start the Flask App
-python frontapp.py
-The API will start at http://127.0.0.1:5000/
+- python frontapp.py
+- The API will start at http://127.0.0.1:5000/
 
 ### 6. Open the Web UI
 Open index.html in a browser. Upload an image to get real-time emotion prediction from the model.
@@ -92,22 +93,21 @@ Open index.html in a browser. Upload an image to get real-time emotion predictio
 |Neutral |	0.89 |	0.90	| 0.89	|
 |Fear|	0.87	|0.84	| 0.85|
 
-Accuracy: ~93%
-F1 Macro Avg: ~92%
-Evaluation tools: classification_report, confusion_matrix from scikit-learn
+- Accuracy: ~93%
+- F1 Macro Avg: ~92%
+- Evaluation tools: classification_report, confusion_matrix from scikit-learn
 
 ### ✨ Key Highlights
-High accuracy using classical ML methods
-No need for GPUs or deep learning
-Portable and lightweight for demo or educational use
-Clean web interface for ease of testing and interaction
+- High accuracy using classical ML methods
+- No need for GPUs or deep learning
+- Portable and lightweight for demo or educational use
+- Clean web interface for ease of testing and interaction
 
 ### 📈 Future Improvements
-Add face detection using OpenCV Haar cascades
-Extend dataset and retrain for robustness
-Integrate deep learning models like CNNs for comparison
-Deploy app to a public cloud or serverless function
-
+- Add face detection using OpenCV Haar cascades
+- Extend dataset and retrain for robustness
+- Integrate deep learning models like CNNs for comparison
+- Deploy app to a public cloud or serverless function
 
 ---
 
