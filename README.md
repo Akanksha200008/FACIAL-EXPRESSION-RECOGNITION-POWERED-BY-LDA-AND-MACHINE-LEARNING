@@ -65,7 +65,7 @@ git clone https://github.com/Akanksha200008/FACIAL-EXPRESSION-RECOGNITION-POWERE
 - source venv/bin/activate  # Windows: venv\Scripts\activate
 
 ### 3.Install Dependencies
--pip install -r requirements.txt
+- pip install -r requirements.txt
 
 - If not present, generate it with:
 - pip freeze > requirements.txt
