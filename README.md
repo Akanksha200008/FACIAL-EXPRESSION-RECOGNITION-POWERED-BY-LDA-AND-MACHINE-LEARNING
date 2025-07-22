@@ -41,8 +41,8 @@ Facial emotion recognition is key in human-computer interaction, mental health a
 
 ---
 
-## 📁 Folder Structure
-emotion-detection-app/
+### 📁 Folder Structure
+emotion-detection/
 - ├── frontapp.py # Flask API server for emotion prediction
 - ├── initialcode.py # ML model training and evaluation script
 - ├── index.html # Web interface for uploading images
@@ -55,22 +55,22 @@ emotion-detection-app/
 
 ---
 
-## 🚀 How to Run the Project
+### 🚀 How to Run the Project
 
-### 1.Clone the Repository
+## 1.Clone the Repository
 git clone https://github.com/Akanksha200008/FACIAL-EXPRESSION-RECOGNITION-POWERED-BY-LDA-AND-MACHINE-LEARNING
 
-### 2.Create Virtual Environment
+## 2.Create Virtual Environment
 - python -m venv venv
 - source venv/bin/activate  # Windows: venv\Scripts\activate
 
-### 3.Install Dependencies
+## 3.Install Dependencies
 - pip install -r requirements.txt
 
 - If not present, generate it with:
 - pip freeze > requirements.txt
 
-### 4. Optional(Train the Model)
+## 4. Optional(Train the Model)
 python initialcode.py
 
 This script:
@@ -79,30 +79,30 @@ This script:
 - Trains an SVM classifier
 - Saves the models and evaluation results
 
-### 5. Start the Flask App
+## 5. Start the Flask App
 - python frontapp.py
 - The API will start at http://127.0.0.1:5000/
 
-### 6. Open the Web UI
+## 6. Open the Web UI
 Open index.html in a browser. Upload an image to get real-time emotion prediction from the model.
 
 
-### Project Workflow
--- Data Preprocessing
+###  🔍 Project Workflow
+## Data Preprocessing
 - Grayscale conversion
 - Image resizing (64x64)
 - Pixel normalization
 - Label encoding and flattening
 
--- Dimensionality Reduction:
+## Dimensionality Reduction:
 - LDA applied to maximize class separability
 - Reduced features fed into classifier
 
--- Model Training:
+## Model Training:
 - SVM classifier trained on LDA-transformed data
 - Optimized for classifying 8 emotional states
 
-### Model Evaluation:
+## Model Evaluation:
 - Accuracy: 64.51%
 - Precision: 44.27%
 - Recall: 61.46%
